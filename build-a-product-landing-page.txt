@@ -1,0 +1,260 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rubber Ducks</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+        <header id="header">
+          <div class="logo-title">
+            <img id="header-img" src="https://img.freepik.com/premium-vector/cute-cartoon-rubber-duck-vector-illustration_773815-129.jpg?w=2000" width="50px">
+            <h1>Rubber Ducks</h1>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <nav id="nav-bar">
+            <ul>
+              <li><a class="nav-link" href="#features">Features</a></li>
+              <li><a class="nav-link" href="#video">Uses</a></li>
+              <li><a class="nav-link" href="#buy-ducks">Buy Ducks!</a></li>
+            </ul>
+          </nav>
+        </header>
+        <section id="section-1">
+          <blockquote class="quote">
+            <hr>
+            <h2>"They evoke memories of childhood joy and provide a sense of comfort and security"</h2>
+            <p>- Microsoft's Copilot</p>
+            <hr>
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input name="email" id="email" type="email" placeholder="Enter your email" required>
+            <input id="submit" type="submit" value= "Enter">
+          </form>
+        </section>
+        <section id="features">
+          <ul>
+            <li>
+              <h2>Environmentally Friendly</h2>
+              <p>We produce our ducks from 100% recycled material and promote a strong and healthy environment.
+            </li>
+            <li>
+              <h2>Fast Shipping</h2>
+              <p>You can rely on Amazon to provide speedy delivery and a service you can trust.</p>
+              </li>
+            <li>
+              <h2>Maxiumum Squeakage</h2>
+              <p>Our researchers have spent years studying squeakiness from chew toys to our own vocal chords to bring you long lasting, high quality squeakage.</p>
+            </li>
+          </ul>
+        </section>
+        <div class="container">
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uYOmtEcZ1lk?si=nKeA8ZbZETHUh0VO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="container">
+          <div id="buy-ducks">
+              <p><a href="https://www.amazon.com/s?k=rubber+ducks&crid=1EH9NAPLEWC4A&sprefix=rubber+duck%2Caps%2C166&ref=nb_sb_noss_1">Buy Ducks!!!</a></p>
+          </div>
+        </div>
+    </main>
+  </body>
+</html>
+
+** end of index.html **
+
+** start of styles.css **
+
+:root {
+  --header-height: 75px;
+  --duck-size: var(--header-height);
+}
+
+body {
+  margin-top: var(--header-height);
+  color: black;
+  background-color: rgb(230, 150, 30);
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: rgba(228,233,252,255);
+  padding: 0 20px 0 0;
+  height: var(--header-height);
+}
+
+.logo-title {
+  display: flex;
+}
+
+#header-img {
+  height: var(--duck-size);
+  width: var(--duck-size);
+  margin: auto 0;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40vw;
+  margin-right: 20px;
+}
+
+nav > ul > li {
+  padding: 0;
+  font-size: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+nav > ul > li > a:hover {
+  background-color: orange;
+}
+
+
+#section-1 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  color: black;
+  margin-bottom: 40px;
+}
+
+.quote h2 {
+  text-align: center;
+}
+
+.quote p {
+  text-align: end;
+  margin-right: 20px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"] {
+  margin: 20px auto 10px;
+  width: 75vw;
+  height: 25px;
+}
+
+input[type="submit"] {
+  border: 0;
+  height: 50px;
+  width: 150px;
+  background-color: white;
+  font-weight: 800;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#features > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  height: 125px;
+  width: 70vw;
+}
+
+#features > ul > li > h2 {
+  margin: 0px;
+  font-size: 2.5em;
+}
+
+#features > ul > li > p {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#buy-ducks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin: 40px;
+  padding: 5;
+  max-width: 500px;
+  background: linear-gradient(to right,
+  red, 
+    orange, 
+    yellow, 
+    green, 
+    blue, 
+    indigo, 
+    violet);
+}
+
+#buy-ducks {
+  padding: 20px;
+}
+
+#buy-ducks p a {
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+#buy-ducks p a:hover {
+  color: yellow;
+}
+
+@media(max-width: 750px) {
+  #features > ul > li > p {
+    font-size: 1em;
+  }
+  nav > ul > li {
+    font-size: 15px;
+    margin: auto 8px;
+  }
+  #features > ul > li > h2 {
+    font-size: 1.75em;
+  }
+}
+
+** end of styles.css **
+
